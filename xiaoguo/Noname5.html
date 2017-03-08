@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>简易日历</title>
+  <!--简易日历的制作-->
+  <style>
+	#div13{
+		width: 606px;
+		height: 300px;
+		margin: 0 auto;
+	}
+	ul{
+		list-style: none;
+		height: 300px;
+	}
+	li{
+		width: 200px;
+		text-align: center;
+		font-size: 24px;
+		color: green;
+		border: 1px solid saddlebrown;
+		float: left;
+		padding: 10px;
+	}
+	 .active{
+            background: rebeccapurple;
+            color: white;
+        }
+	#div13 div{
+            height: 100px;
+            width: 600px;
+            border: 1px solid red;
+        }
+  </style>
+ </head>
+ <body>
+  <div id="div13">
+    <ul>
+        <li class="active">1月</li>
+        <li>2月</li>
+        <li>3月</li>
+        <li>4月</li>
+        <li>5月</li>
+        <li>6月</li>
+        <li>7月</li>
+        <li>8月</li>
+        <li>9月</li>
+        <li>10月</li>
+        <li>11月</li>
+        <li>12月</li>
+    </ul>
+    <div>
+        <h2>1月</h2><br/>
+        <p>1月.....</p>
+    </div>
+</div>
+<script>
+	var arr=['1月1111111111111',
+    '22222222222222222222222',
+    '3333333333333333333333',
+    '444444444444444444444444',
+    '55555555555555555555'];
+	var demo = document.getElementById('div13');
+	var oLi = demo.getElementsByTagName('li');
+	var demo1 = demo.getElementsByTagName('div')[0];
+
+	for(var i = 0;i < oLi.length;i++){
+		oLi[i].index = i;
+		oLi[i].onmouseover = function(){//onmouseover
+			for(var i = 0;i < oLi.length;i++){
+				oLi[i].className = '';
+			}
+		this.className = 'active';
+		demo1.innerHTML = '<h2>'+(this.index + 1)+'月</h2><p>'+arr[this.index]+'</p>';
+		}
+		
+	}
+</script>
+ </body>
+</html>

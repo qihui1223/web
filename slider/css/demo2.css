@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	}
+#box{
+	position: relative;
+	width: 478px;
+	height: 268px;
+	margin: 100px auto;
+	border: 4px solid #1B2727;
+	overflow:hidden;
+	font-family: '宋体';
+	font-size: 50px;
+	}
+#images{
+	position: absolute;
+	width: 2868px;
+	height: 268px;
+	}
+#images li{
+	float: left;
+	}
+img{
+	width: 478px;
+	height: 268px;
+	}
+#num{
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	}
+#num .on{
+	background-color: #2E61F5;
+	}
+#num li{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-color: #DFDDE3;
+	border-radius: 50%;
+	cursor: pointer;
+	}
+.btn{
+	position: absolute;
+	width: 40px;
+	height: 60px;
+	top: 50%;
+	margin-top: -30px;
+	background: rgba(0,0,0,0.5);
+	text-align: center;
+	line-height: 60px;
+	color: #fff;
+	cursor: pointer;
+	}
+#btn-l{
+	left: 0;
+	}
+#btn-r{
+	right: 0;
+	}

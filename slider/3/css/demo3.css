@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin: 0 auto;
+	padding: 0;
+	border: 0;
+	list-style-type: none;
+	}
+.web{
+	width: 100%;;
+	height: 290px;
+	margin-top: 20px;
+	
+	}
+.con{
+	position: relative;
+	width: 465px;
+	height: 260px;
+	overflow: hidden;
+	}
+.con ul{
+	position: absolute;
+	width: 2790px;
+	height: 260px;
+	}
+/*
+    所有的li元素定位在ul的左侧（第一个除外）;
+    每次触发事件，为对应的导航项添加对应的样式；
+    判断当前导航项与前一个导航项的索引大小，进行对应的动画（使用CSS（）立即定位是重点！）；
+    将当前导航项索引赋值给前一索引值。
+*/
+.con ul li {
+	
+	float: left;
+	}
+.com li img {
+	width: 465px;
+	height: 260px;
+	}
+.nav ul{
+	width: 466px;
+	height:30px;
+	background: url('../images/nav.png')
+	
+	}
+.nav li.bg{
+	background: #799;
+	}
+.nav ul li {
+	width: 92px;
+	height: 30px;
+	float: left;
+	text-align: center;
+	line-height: 30px;
+	font-size: 16px;
+    color: #fff;
+	border-left: 1px solid #fff;
+	cursor: pointer;
+	}

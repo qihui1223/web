@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" media="all"/>
+</head>
+<body>
+
+<div id="mp-banner" class="mp-banner-slide">
+    <ul id="mpList" class="mp-banner-list">
+        <li class="item banner0">
+            <a target="_blank">
+                <img src="images/img1.jpg" alt="ez原画">
+                <span class="mp-line-opacity">探险家伊泽瑞尔</span>
+            </a>
+        </li>
+        <li class="item banner1">
+            <a target="_blank">
+                <img src="images/img2.jpg" alt="冒险精神">
+                <span class="mp-line-opacity">冒险精神</span>
+            </a>
+        </li>
+        <li class="item banner2">
+            <a target="_blank">
+                <img src="images/img3.jpg" alt="足球先生">
+                <span class="mp-line-opacity">足球先生</span>
+            </a>
+        </li>
+        <li class="item banner3">
+            <a target="_blank">
+                <img src="images/img4.jpg" alt="失落的世界">
+                <span class="mp-line-opacity">失落的世界</span>
+            </a>
+        </li>
+        <li class="item banner4">
+            <a target="_blank">
+                <img src="images/img5.jpg" alt="未来战士">
+                <span class="mp-line-opacity">未来战士</span>
+            </a>
+        </li>
+    </ul>
+    <div id="dots" class="mp-banner-dots">
+        <a class="dot"></a>
+        <a class="dot"></a>
+        <a class="dot dot-active"></a>
+        <a class="dot"></a>
+        <a class="dot"></a>
+    </div>
+</div>
+<script>
+    (function(){
+        var box = document.getElementById('mp-banner');
+        var ul = document.getElementById('mpList');
+        var li = ul.getElementsByTagName('li');
+        var len = li.length;
+        var dots = document.getElementById('dots');
+        var dot = dots.getElementsByTagName('a');
+        var arr = [];
+        for(var i = 0; i < len; i++){
+            var item = li[i];
+            arr.push({
+                top : parseInt(css(item, 'top')),
+                left : parseInt(css(item, 'left')),
+                width : parseInt(css(item, 'width')),
+                height : parseInt(css(item, 'height')),
+                zIndex : parseInt(css(item, 'zIndex'))
+            });
+            dot[i].index = i;
+            dot[i].onmouseover = function(){
+                scroll(this.index);
+            }
+        }
+        function scroll(n){
+            tab(n);
+            var ret = center(n, arr.slice(0));
+            for(var i = 0; i < len; i++){
+                li[i].style.zIndex = ret[i].zIndex;
+                act(li[i], ret[i]);
+            }
+        }
+        function tab(n){
+            for(var i = 0; i < len; i++){
+                dot[i].className = 'dot';
+            }
+            dot[n].className += ' dot-active';
+        }
+        function center(n, arr){
+            n -= Math.floor(arr.length / 2);
+            for(var i = 0; i < Math.abs(n); i++){
+                if(n > 0){
+                    arr.push(arr.shift());
+                } else {
+                    arr.unshift(arr.pop());
+                }
+            }
+            return arr;
+        }
+        function css(obj, attr){
+            if(obj.currentStyle){
+                return obj.currentStyle[attr];
+            } else {
+                return getComputedStyle(obj, false)[attr];
+            }
+        }
+        function act(obj, json, fn){
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function(){
+                var stop = true;
+                for(var attr in json){
+                    var target = json[attr];
+                    var cur = parseInt(css(obj, attr));
+                    var speed = (target - cur) / 8;
+                    speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+                    if(target != cur){
+                        stop = false;
+                    }
+                    cur += speed;
+                    obj.style[attr] = cur + 'px';
+                }
+                if(stop){
+                    clearInterval(obj.timer);
+                    obj.timer = null;
+                    fn && fn();
+                }
+            }, 30);
+        }
+
+    }());
+</script>
+</body>
+</html>
