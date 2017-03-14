@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>皮肤切换</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+		}
+ 	body{
+		font:12px/1.125 Microsoft YaHei;
+		background:#fff;
+		}
+	.wrap{
+		width: 400px;
+		height: 200px;
+		text-align: center;
+		margin: 30px auto;
+		}
+	.btn{
+		width: 100px;
+		height: 40px;
+		margin-left: 20px;
+		}
+</style>
+<link rel="stylesheet" id="style" href="css/blue.css">
+</head>
+
+<body>
+<div class="wrap">
+	<div class="demo" id="div">
+    	<button class="btn btn-primary" id="blue">默认</button>
+        <button class="btn btn-warning" id="yellow">黄色</button>
+        <button class="btn btn-success" id="green">绿色</button>
+    </div>
+</div>
+<div style="display:none;">
+    <div id="div" style="width:100px;height:200px;background:#000;"></div>
+    <button id="btn">test</button>
+</div>
+<script>
+    window.onload = function(){
+		var div = document.getElementById('div')
+        var btn = div.getElementsByTagName('button')
+        var style = document.getElementById('style')
+        var css = ['blue.css', 'yellow.css', 'green.css']
+
+        function init(){
+            var href = getCookie('css')
+            if(href.length){
+                setStyle(href)
+            }
+        }
+
+        init()
+
+        function changeStyle(){
+            for (var i = 0; i < btn.length; i++) {
+                btn[i].index = i
+                btn[i].onclick = function(){
+                    setStyle(css[this.index])
+                }
+            };
+        }
+
+        changeStyle()
+
+        function setStyle(href){
+            style.href = 'css/' + href
+            setCookie('css', href, 1)
+        }
+
+        function setCookie(key, value, day){
+            var d = new Date()
+            d.setDate(d.getDate() + day)
+            document.cookie = key + '=' + value + ';expires=' + d
+        }
+
+        function getCookie(key){
+            var list = document.cookie.split(';')
+            for (var i = 0; i < list.length; i++) {
+                var one = list[i].split('=')
+                if(one[0] == key){
+                    return one[1];
+                }
+            };
+            return ''
+        }
+
+        function delCookies(key){
+            setCookie(key, 1, -1)
+        }
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<title>popover弹出框</title>
+</head>
+
+<body>
+<div class="container" style="padding: 100px 50px 10px">
+	<button type="button" class="btn btn-default popover-show" title="Popover title" data-container="body"
+    	data-toggle="popover" data-placement="left" data-content="左侧的 Popover 中的一些内容">左侧的popover
+        </button>
+	<button type="button" class="btn btn-primary popover-hide" title="Popover title" data-container="body"
+    	data-toggle="popover" data-placement="top" data-content="顶部的popover的一些内容">顶部的popover
+    </button>
+    <button type="button" class="btn btn-success popover-destroy" title="Popover title" data-container="body"
+    	data-toggle="popover" data-placement="bottom" data-content="底部的popover的一些内容">底部的popover</button>
+    <button type="button" class="btn btn-warning popover-toggle" title="Popover title" data-container="body"
+    	data-toggle="popover" data-placement="right" data-content="右侧popover的一些内容">右侧的popover</button>
+    <br><br><br><br><br>
+    <p class="popover-options">
+    	<a href="#" type="button" class="btn btn-warning" title="<h2>Title</h2>" data-container="body"
+        	data-toggle="popover" data-content="<h4>Popover 中的一些内容 —— options 方法</h4>">Popver</a>
+    </p>
+</div>
+<script>
+	/*$(function(){
+		$('[data-toggle="popover"]').popover();
+		})*/
+	$(function(){$('.popover-show').popover('show');});
+	$(function(){$('.popover-hide').popover('hide');});
+	$(function(){$('.popover-destroy').popover('destroy');});
+	$(function(){$('.popover-toggle').popover('toggle');});
+	$(function () { $(".popover-options a").popover({html : true });});
+</script>
+</body>
+</html>

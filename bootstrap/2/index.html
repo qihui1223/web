@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<title>下拉菜单</title>
+</head>
+
+<body>
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fulid">
+    	<div class="navbar-header">
+        	<a class="navbar-brand" href="#">首页</a>
+        </div>
+        <div>
+        	<ul class="nav navbar-nav">
+            	<li class="active"><a href="#">ios</a></li>
+                <li><a href="#">svg</a></li>
+                <li class="dropdown">
+                	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    	java
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                    	<li><a href="#">jemter</a></li>
+                        <li><a href="#">ecj</a></li>
+                        <li><a>jasper report</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">分离的链接</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">另一个分离的链接</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<p>带有下拉菜单的标签页</p>
+<ul class="nav nav-tabs">
+	<li class="active">
+    	<a href="#">home</a>
+    </li>
+    <li>
+    	<a href="#">svg</a>
+    </li>
+    <li>
+    	<a href="#">ios</a>
+    </li>
+    <li><a href="#">vn.net</a></li>
+    <li class="dropdown">
+    	<a href="#" class="dropdown-toggle" data-toggle="dropdown" href="#">java
+        	<span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+        	<li><a href="#">Swing</a></li>
+            <li><a href="#">jMeter</a></li>
+            <li><a href="#">ejb</a></li>
+            <li class="divider"></li>
+            <li><a href="#">分离的链接</a></li>
+        </ul>
+    </li>
+    <li><a href="#">php</a></li>
+</ul>
+</body>
+</html>
+<!--方法
+下拉菜单切换有一个简单的方法用来显示或隐藏下拉菜单。
+$().dropdown('toggle')-->

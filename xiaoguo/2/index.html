@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>简易网页时钟</title>
+<style>
+body{
+	padding: 100px 200px;
+	}
+#clock{
+	width: 350px;
+    height: 65px;
+    text-align: center;
+    line-height: 65px;
+    font-size: 25px;
+    background: #999;
+	}
+span{
+	border: solid #b4b4b4 1px;
+	margin: 0 10px;
+	padding: 5px 5px;
+	background: #fbfbfb;
+	width: 80px;
+	height: 40px;
+	color: #000;
+	}
+
+</style>
+</head>
+<body>
+<div id="clock">
+	<span></span>点<span></span>分<span></span>秒
+</div>
+</body>
+<script>
+window.onload = function(){
+	var oclock = document.getElementById('clock');
+	var ospan = oclock.getElementsByTagName('span');
+	setInterval(getTimes,1000);
+	getTimes();
+	function getTimes(){
+		var oDate = new Date();
+		var oDate = [oDate.getHours(),oDate.getMinutes(),oDate.getSeconds()];
+		for(var i in oDate){
+			ospan[i].innerHTML = format(oDate[i]);
+			}
+		}
+		function format(a){
+			return a.toString().replace(/^(\d)$/,"0$1");<!--0$1 如果a是一位数字，则在前面加上0，返回该字符串比如a 为1,则返回"01"了-->
+			}
+	}
+</script>
+</html>

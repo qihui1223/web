@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<title>按钮插件</title>
+</head>
+
+<body style="padding: 100px 300px">
+<h2>按钮效果</h2>
+<h4>.button('toggle')</h4>
+<div id="myButtons1">
+	<button type="button" class="btn btn-primary">原始</button>
+</div>
+<h4>.button('loading')</h4>
+<div id="myButtons2">
+	<button type="button" class="btn btn-primary" data-loading-text="loading...">原始</button>
+</div>
+<h4>.button('reset')</h4>
+<div id="myButtons3">
+	<button type="button" class="btn btn-primary" data-loading-text="loading...">原始</button>
+</div>
+<h4>.button(string)</h4>
+	<button type="button" class="btn btn-primary" id="myButton4" 
+    data-complete-text="Loading finished">请点击我
+</button>
+<script>
+	$(function () {
+        $("#myButtons1 .btn").click(function(){
+            $(this).button('toggle');
+        });
+    });
+    $(function() { 
+        $("#myButtons2 .btn").click(function(){
+            $(this).button('loading').delay(1000).queue(function() {
+            });        
+        });
+    });   
+    $(function() { 
+        $("#myButtons3 .btn").click(function(){
+            $(this).button('loading').delay(1000).queue(function() {
+                $(this).button('reset');
+            });        
+        });
+    });  
+   $(function() { 
+        $("#myButton4").click(function(){
+            $(this).button('loading').delay(1000).queue(function() {
+                $(this).button('complete');
+            });        
+        });
+    });     
+</script>
+</body>
+</html>
