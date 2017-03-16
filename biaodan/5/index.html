@@ -88,7 +88,7 @@
        }  
        
 	   //正则验证 
-       var pattern = /^[a-zA-Z]{1}[a-zA-Z0-9_]{5,19}$/
+       var pattern = /^[a-zA-Z0-9]{1}[a-zA-Z0-9_]{5,19}$/
 	   if(!pattern.test(name)){
 		   $("userMsg").innerHTML = "<font color = 'red'>用户名呢称错误</font>"; 
 		   return false;
@@ -170,7 +170,7 @@
            return false;  
        }  
          
-       var pattern = /^[a-zA-Z]{1}[a-zA-Z0-9_]{5,19}$/
+       var pattern = /^[a-zA-Z0-9]{1}[a-zA-Z0-9_]{5,19}$/
 	   if(!pattern.test(name)){
 		   $("userMsg").innerHTML = "<font color = 'red'>用户名呢称错误</font>"; 
 		   return false;
