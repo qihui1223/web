@@ -1,0 +1,413 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+	background-color: #fff;
+	}
+header{
+	width: 100%;
+	height: 80px;
+	overflow: hidden;
+	z-index: 9;
+	}
+.nav-box{
+	background: #567598;
+	padding: 10px;
+	}
+.nav-font{
+	font-size: 16px;
+	}
+.nav-font > li > a{
+	color: #fff !important;
+	}
+.nav-search{;
+	
+	}
+.searchbox{
+	width: 215px;
+	height: 40px;
+	background: #5899dd;
+	z-index: 10;
+	}
+.search-text{
+	
+	}
+.navbody-con{
+	border: 1px solid orange;
+	width: 758px;
+	height: 202px;
+	position: absolute;
+	right: 30px;
+	background: #5899dd;
+	z-index: 10;
+	}
+.nav-con{
+	
+	}
+	
+	
+/*main*/
+#main{
+	width:100%;
+	overflow: hidden;
+	
+	}
+#myCarousel ol li{
+	width: 12px;
+	height: 12px;
+	background: #666;
+	}
+#myCarousel ol li.active{
+	width: 14px;
+	height: 14px;
+	background: #2074B9 !important;
+	}
+.btn-left{
+	
+	color: red;
+	font-size: 50px;
+	background: orange;
+	}
+/*shop*/
+.shop li {
+    width: 33.333333%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.shop li:nth-child(4) {
+    float: right;
+}
+
+.shop li img {
+    width: 100%;
+    display: block;
+    transition: all .3s;
+}
+
+.shop .itemtxt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #FFF;
+    transition: all .3s;
+}
+
+.shop .itemtit:hover .itemtxt {
+    transform: scale(1.1);
+}
+
+.shop .itemtit:hover .blue-bg {
+    background: url(../image/blue_bg.png) repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.shop .item .blue-bg {
+    background: url(../image/blue_bg.png) repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.shop .item:hover .blue-bg {
+    display: none;
+}
+
+.shop .item .itemtxt .t {
+    padding-top: 33%;
+}
+
+.shop .item .itemtxt .c {
+    position: relative;
+    top: 30px;
+    opacity: 0;
+}
+
+.shop .item .itemtxt .more {
+    background-color: #fff;
+    color: #3871b9;
+    width: 98px;
+    height: 28px;
+    display: block;
+    opacity: 0;
+    margin: 20% auto 0px;
+    text-align: center;
+    line-height: 28px;
+    transition: all .3s;
+}
+
+.shop .item:hover img {
+    transform: scale(1.1);
+}
+
+.shop .item:hover .t {
+    padding-top: 23%;
+}
+
+.shop .item:hover .c {
+    top: 10px;
+    opacity: 1;
+}
+
+.shop .item:hover .more {
+    margin-top: 15%;
+    opacity: 1;
+}
+
+.shop .item .itemtxt::before,
+.shop .item .itemtxt::after {
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    transition: all .2s;
+}
+
+.shop .item .itemtxt::before {
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+    transform: scale(0, 1);
+}
+
+.shop .item:hover .itemtxt::before {
+    transform: scale(1, 1);
+}
+
+.shop .item .itemtxt::after {
+    border-left: 1px solid #FFF;
+    border-right: 1px solid #FFF;
+    transform: scale(1, 0);
+}
+
+.shop .item:hover .itemtxt::after {
+    transform: scale(1, 1);
+}
+
+.shop .itemtxt .t {
+    font: 24px/1.5 "Microsoft JhengHei";
+    padding-top: 25%;
+    transition: all .3s;
+}
+
+.shop .itemtxt .c {
+    font: 14px/1.8 "Microsoft JhengHei";
+    transition: all .3s;
+}
+
+.shop .itemtxt .ico {
+    width: 22px;
+    height: 22px;
+    background: url(../image/ibox_i1.png) no-repeat;
+    display: block;
+    margin: 10% auto 0;
+}
+
+.shop .shop-pic > li{
+	width: 50%;
+	float: left;
+	position: relative;
+	padding: 3% 0;
+	overflow: hidden;
+	transition: all .3s;
+	}
+.shop .shop-pic > li a{
+	padding: 10% 0;
+	}
+.shop .shop-pic > li img{
+	max-width: 80%;
+	display: block;
+	margin: 0 auto;
+	}
+.shop .shop-pic > li:hover{
+	background: #e5e3e3;
+	}
+@media screen and (max-width: 1200px) {
+    .shop .itemtxt .t {
+        font-size: 20px;
+    }
+
+    .shop .itemtxt .c {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 861px) {
+    .shop li {
+        width: 100%;
+    }
+}
+
+/* footer*/
+.footer{
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	}
+.link {
+    background-color: #567598;
+    padding: 4% 0;
+	width: 100%;
+	overflow: hidden;
+}
+
+.copyright {
+    background-color: #213855;;
+    padding: 40px 0;
+	width: 100%;
+	overflow: hidden;
+}
+
+.linkbox, .copybox {
+    height: 100%;
+    width: 1120px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.linkbox li {
+    float: left;
+    height: 100%;
+    width: 18%;
+}
+
+.linkbox li:last-child {
+    width: 10%;
+}
+
+.linkbox a {
+    color: #c9d5e3;
+    transition: all .3s;
+}
+
+.linkbox a:hover {
+    color: #fff;
+    margin-left: 5px;
+}
+
+.linkbox li dt {
+    margin-bottom: 12px;
+}
+
+.linkbox li dt a {
+    font-size: 16px;
+    color: #FFF;
+}
+
+.linkbox li dd {
+    line-height: 2.2;
+}
+
+.copy-info p {
+    color: #FFF;
+    display: block;
+}
+
+.copy-info .f1 {
+    padding-left: 20px;
+    background: url(../image/f1.png) left center no-repeat;
+}
+
+.copy-info .f2 {
+    padding-left: 20px;
+    background: url(../image/f2.png) left center no-repeat;
+}
+
+.copy-info .f3 {
+    padding-left: 20px;
+    background: url(../image/f3.png) left center no-repeat;
+}
+
+.copy-info a {
+    color: #a98926;
+}
+
+.copy-partner p {
+    color: #FFF;
+    letter-spacing: 1px;
+}
+
+.copy-partner a {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    float: left;
+    position: relative;
+    background: url(../image/sharp.png) no-repeat;
+}
+
+.copy-partner .a1 {
+    background-position: 0 -37px;
+}
+
+.copy-partner .a2 {
+    background-position: -46px -38px;
+}
+
+.copy-partner .a3 {
+    background-position: -93px -38px;
+}
+
+.copy-partner a i {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    background: url(../image/sharp.png) no-repeat;
+}
+
+.copy-partner a .ih {
+    transform: scale(0);
+    transition: all .3s;
+    background: url(../image/sharp2.png) no-repeat;
+}
+
+.copy-partner a:hover .ih {
+    transform: scale(1);
+}
+
+.copy-partner a .i2 {
+    background-position: -46px 0;
+}
+
+.copy-partner a .i3 {
+    background-position: -93px 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .linkbox, .copybox {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .link {
+        display: none;
+    }
+
+    .copy-partner {
+        float: none;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .copy-info p {
+        padding-bottom: 0;
+    }
+
+    .hotTitle {
+        display: none;
+    }
+}
