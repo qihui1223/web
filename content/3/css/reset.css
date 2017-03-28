@@ -111,7 +111,7 @@ body {
     line-height: 1;
 }
 
-ol,
+ol,li,
 ul {
     list-style: none;
 }
