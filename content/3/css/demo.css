@@ -1,0 +1,427 @@
+@charset "utf-8";
+@charset "UTF-8";
+/* 设置默认编码集 */
+
+/* reset css B */
+html, body, p, ul, ol, dl, dt, dd, li, form {
+    margin: 0;
+    padding: 0;
+}
+
+img, input, button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+select, input, textarea {
+    margin: 0;
+    font-size: 12px;
+}
+
+textarea {
+    resize: none;
+}
+
+img {
+    margin: 0;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+body {
+    font: 12px/1.8 "Microsoft JhengHei", "Helvetica Neue", "Hiragino Sans GB", Arial, "SimSun", sans-serif;
+    margin: 0 auto;
+    color: #989898;
+    background-color: #fff;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    line-height: 0;
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a, a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+input::-webkit-input-placeholder {
+    color: #FFF;
+}
+
+/* reset css E */
+
+/* common css B */
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.pb10 {
+    padding-bottom: 10px;
+}
+
+.trans {
+    transition: all .3s;
+}
+
+/* common css E */
+
+html,body {
+    min-width: 320px;
+}
+/* header css B */
+.blue-header {
+    width: 100%;
+}
+
+/* logo B */
+.blue-nav {
+    width: 100%;
+    height: 80px;
+    background-color: #567598;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-logo {
+    margin: 30px 0 0 0;
+}
+
+.nav-logo img {
+    display: block;
+    width: 100%;
+}
+
+.navtop {
+    height: 100%;
+    width: 1120px;
+    margin: 0 auto;
+    position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+    .navtop {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .blue-nav {
+        height: 50px;
+    }
+
+    .nav-logo {
+        margin: 15px 0 0 5%;
+    }
+
+    .navtop {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 641px) {
+    .nav-logo {
+        width: 80px;
+        margin: 20px 0 0 5%;
+    }
+}
+
+/* logo E */
+/* nav B */
+
+.navbody li {
+    float: left;
+    text-align: center;
+    width: 115px;
+    line-height: 80px;
+    transition: all .3s;
+}
+
+.navbody .navbody-main li:hover a {
+    color: #83c7ff;
+}
+
+.navbody .navbody-main li.active a {
+    color: #83c7ff;
+}
+
+.navbody li:first-child {
+    width: 68px;
+}
+
+.navbody li a {
+    color: #FFF;
+    font-size: 14px;
+}
+
+.menu-handler {
+    display: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    margin-right: 15px;
+}
+
+.menu-handler .burger {
+    height: 4px;
+    width: 30px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    left: 20%;
+    top: 14px;
+    transform-origin: center;
+}
+
+.menu-handler .burger2 {
+    top: 24px;
+}
+
+.menu-handler .burger3 {
+    top: 34px;
+}
+
+.menu-handler.active .burger1 {
+    top: 25px;
+    transform: rotate(-45deg);
+}
+
+.menu-handler.active .burger2 {
+    display: none;
+}
+
+.menu-handler.active .burger3 {
+    top: 25px;
+    transform: rotate(45deg);
+}
+
+.mobilebox-main {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .navbody .navbody-main {
+        display: none;
+    }
+
+    .menu-handler {
+        display: block;
+    }
+
+    .mobilebox-main.active {
+        display: block;
+    }
+
+    .mobilebox-main {
+        display: none;
+        width: 100%;
+        background-color: #f6f6f6;
+        padding: 20px 0;
+        position: relative;
+        top: 50px;
+        left: 0;
+    }
+
+    .mobilebox-main li {
+        float: none;
+        color: #434343;
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.4;
+        text-align: left;
+        padding: 14px 0 14px 5%;
+    }
+
+    .mobilebox-main li:hover {
+        background-color: #3c669c;
+    }
+
+    .mobilebox-main li a {
+        color: #434343;
+    }
+
+    .mobilebox-main li:hover a {
+        color: #fff;
+    }
+}
+
+/* nav E */
+/* search B */
+.navtop {
+    position: relative;
+}
+
+.nav-search {
+    background: url(../img/serach_ico.png) no-repeat center center;
+    display: block;
+    width: 30px;
+    height: 16px;
+    padding: 40px 0;
+}
+
+.searchbox {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    z-index: 101;
+    width: 215px;
+    height: 40px;
+    border-top: 2px solid #acccec;
+    background-color: #5899dd;
+}
+
+.searchbox .search-text,
+.searchbox .search-ico {
+    border: none;
+    display: block;
+    background-color: transparent;
+    color: #fff;
+    font: 12px/30px "Microsoft JhengHei";
+}
+
+.search-text {
+    width: 80%;
+    height: 38px;
+    padding: 5px 0;
+    margin-left: 5%;
+}
+
+.search-ico {
+    background: url(../img/serach_ico.png) no-repeat center center;
+    width: 15%;
+    height: 38px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.navbody-con {
+    display: none;
+    width: 758px;
+    height: 202px;
+    background-color: #5899dd;
+    position: absolute;
+    right: 30px;
+    bottom: -212px;
+    border-top: 2px solid #acccec;
+}
+
+.navcon li {
+    width: 115px;
+    height: 200px;
+    border-left: 1px solid #4f89c6;
+    float: left;
+    padding-top: 30px;
+    position: relative;
+}
+
+.navcon li i {
+    width: 115px;
+    height: 200px;
+    background-color: #6ba8e7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: all .3s;
+}
+
+.navcon li.active i {
+    transform: scaleX(1);
+}
+
+.navcon li:first-child {
+    border-left: none;
+}
+
+.navcon li a {
+    display: block;
+    text-align: left;
+    padding: 5px 0 5px 25px;
+    font-size: 12px;
+    line-height: 1.8;
+    position: relative;
+    z-index: 101;
+}
+
+.navcon li a:hover {
+    color: #83c7ff;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-search {
+        width: 50px;
+        height: 50px;
+        background-color: #5899dd;
+        margin-top: 0;
+        padding: 17px;
+    }
+
+    .searchbox {
+        width: 100%;
+    }
+
+    .search-ico {
+        width: 50px;
+    }
+
+    .navbody-con {
+        display: none;
+    }
+}
+
+/* search E */

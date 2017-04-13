@@ -16,6 +16,9 @@ header{
 	background: #567598;
 	padding: 10px;
 	}
+.nav-main{
+	float: left;
+	}
 .nav-font{
 	font-size: 16px;
 	}
@@ -92,14 +95,11 @@ header{
 
 
 /*serch*/
-.search{
-	float: right;
-	}
 .nav-search {
     background: url(../img/serach_ico.png) no-repeat center center;
     display: block;
     position: relative;
-    right: 88px;
+    right: 50px;
     width: 19px;
     height: 16px;
     top: 17px;
@@ -107,14 +107,14 @@ header{
 
 .searchbox {
     position: absolute;
-    right: 7px;
-	bottom: -40px;
+    right: -50px;
+    bottom: -40px;
     z-index: 101;
-    width: 208px;
-    height: 40px;
+    width: 160px;
+    height: 32px;
     border-top: 2px solid #acccec;
     background-color: #5899dd;
-	display: none;
+    display: none;
 	}
 .searchbox .search-text,
 .searchbox .search-ico {
@@ -127,7 +127,7 @@ header{
 
 .search-text {
     width: 80%;
-    height: 38px;
+    height: 30px;
     padding: 5px 0;
     margin-left: 5%;
 }
@@ -135,24 +135,37 @@ header{
 .search-ico {
     background: url(../img/serach_ico.png) no-repeat center center;
     width: 15%;
-    height: 38px;
+    height: 30px;
     position: absolute;
     right: 0;
     top: 0;
 }	
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
+	.nav-main{
+		width: 90%;
+		}
+	.nav-main .nav li{
+		width: 12.5%;
+		}
+	.nav li a{
+		font-size: 15px;
+		padding-right: -32px;
+		width: 105px;
+		text-align: center;
+		}
     .nav-search {
-        width: 50px;
-        height: 50px;
+		float:right;
+       	top: 10px;
         background-color: #5899dd;
         margin-top: 0;
         padding: 17px;
     }
 
     .searchbox {
-        width: 100%;
+       float: right;
+	   right: 0;
     }
 
     .search-ico {
@@ -163,7 +176,11 @@ header{
         display: none;
     }
 }
-
+@media (max-width: 768px){
+	.search {
+		display: none;
+		}
+	}
 
 
 
@@ -465,4 +482,30 @@ header{
 	}
 .footer li dd{
 	margin-bottom: 8px;
+	}
+/**/
+@media (max-width:1024px){
+	.footer{
+		
+		}
+	.footer ul li{
+		float: left;
+		width: 15%;
+		margin: 0 0.83%
+		}
+	}
+@media (max-width:768px){
+	.footer ul li{
+		float: left;
+		width: 30%;
+		margin-top: 20px;
+		}
+	}
+@media (max-width:360px){
+	.footer ul li{
+		float: left;
+		width: 45%;
+		margin: 0 2.5%;
+		margin-top: 20px;
+		}
 	}
