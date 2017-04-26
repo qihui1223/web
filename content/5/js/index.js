@@ -1,6 +1,5 @@
 // JavaScript Document
 //数字滚动
-$(document).ready(function() {
     $.fn.countTo = function (options) {
 		options = options || {};
 		return $(this).each(function () {
@@ -81,7 +80,7 @@ $(document).ready(function() {
 	options = $.extend({}, options || {}, $this.data('countToOptions') || {});
 	$this.countTo(options);
   }
-});
+
 
 
 

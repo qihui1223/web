@@ -260,7 +260,10 @@
 	padding: 20px 15px 10px;
     padding-right: 15px;
 	font-family: Oswald;
-	color: #f70f7e
+	color: #f70f7e;
+	}
+.w-div h1{
+	color: #f70f7e;
 	}
 .word-number h4{
 	display: block;

@@ -180,29 +180,32 @@ initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<div class="container">
     	<div class="col-md-3 col-sm-3 col-xs-6">
         	<div class="w-div">
-                <!--下载量：<span class="word1"></span>次-->
-                <h1 class="timer count-title" id="count-number" data-to="300" data-speed="1500"></h1>
+                <h1 class="counter">29087</h1>
+                <!--<h1 class="timer count-title" id="count-number" data-to="300" data-speed="1500"></h1>-->
             </div>
             <h4>单词数</h4>
             <p>CoolSite360，采用标准的html及css规范，使您的设计便于维护及二次开发</p>
         </div>
         <div class="col-md-3 col-sm-3 col-xs-6">
         	<div class="w-div w2">
-            	<h1 class="timer count-title" id="count-number" data-to="3979" data-speed="1500"></h1>
+            	<h1 class="counter">3979</h1>
+            	<!--<h1 class="timer count-title" id="count-number" data-to="3979" data-speed="1500"></h1>-->
             </div>
             <h4>四级词汇</h4>
             <p>CoolSite360，采用标准的html及css规范，使您的设计便于维护及二次开发</p>
         </div>
         <div class="col-md-3 col-sm-3 col-xs-6">
         	<div class="w-div w3">
-            	<h1 class="timer count-title" id="count-number" data-to="6789" data-speed="1500"></h1>
+            	<h1 class="counter">6789</h1>
+            	<!--<h1 class="timer count-title" id="count-number" data-to="6789" data-speed="1500"></h1>-->
             </div>
             <h4>六级词汇</h4>
             <p>CoolSite360，采用标准的html及css规范，使您的设计便于维护及二次开发</p>
         </div>
         <div class="col-md-3 col-sm-3 col-xs-6">
         	<div class="w-div w4">
-            	<h1 class="timer count-title" id="count-number" data-to="6789" data-speed="1500"></h1>
+            	<h1 class="counter">39890</h1>
+            	<!--<h1 class="timer count-title" id="count-number" data-to="6789" data-speed="1500"></h1>-->
             </div>
             <h4>下载量</h4>
             <p>CoolSite360，采用标准的html及css规范，使您的设计便于维护及二次开发</p>
@@ -392,6 +395,12 @@ initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.fancybox.min.js.下载"></script>
-<script src="js/index.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.countup.min.js"></script>
+<!--<script src="js/index.js"></script>-->
+<script type="text/javascript">
+		$('.fancybox').fancybox();//图片点击弹出放大
+		$('.counter').countUp(); //数字翻滚
+	</script>
 
 </html>
