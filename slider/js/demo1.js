@@ -4,7 +4,7 @@ $(function(){
 	var clone = $('#images li').first().clone();//克隆第一张图片
 	$('#images').append(clone);//将克隆的追加在最后
 	var i = 0;
-	var size = $('#images li').size();//获取图片的长度
+	var size = $('#images li').size();//获取图片的个数
 	//点击向左轮播
 	$('#btn-l').click(function(){
 		i--;
