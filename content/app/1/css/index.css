@@ -1,0 +1,606 @@
+@charset "utf-8";
+/* CSS Document */
+body,a,h1,h2,h3,h4,h5,p,ul,li,img,input,button{margin: 0; padding: 0; font-family: Helvetica;}
+ul,li,ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+input{border: 0; outline: 0; box-sizing: content-box;}
+img{vertical-align: top;}
+
+a,input,button{
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	  /*这个属性只用于iOS (iPhone和iPad)。当你点击一个链接或者通过Javascript定义的可点击元素的时候，
+	  它就会出现一个半透明的灰色背景。要重设这个表现，你可以设置-webkit-tap-highlight-color为任何颜色。*/
+	}
+
+input,button{
+	-webkit-appearance: none;
+	/*消除输入框和按钮的原生外观，在iOS上加上这个属性才能给按钮和输入框自定义样式 。   
+	注意：不同type的input使用这个属性之后表现不一。text、button无样式，radio、checkbox直接消失*/
+	}
+.clearFix {
+	zoom: 1;
+}
+.clearFix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/*end reset css*/
+
+/*index css*/
+
+/*实现头部固定*/
+html,body{
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	}
+
+/*头部*/
+.head{
+	position: relative;
+    height: 1.5rem;
+    background: #f23030;
+	}
+.head h1{
+	position: absolute;
+    top: 0;
+    left: .37rem;
+    width: 2.22rem;
+	}
+.head h1 a{
+	display: block;
+	height: 1.5rem;
+	background: url(../img/sprites1.png) no-repeat;
+	background-position: .037rem .037rem;
+	background-size: 14.2rem 4.537rem;
+	}
+.search{
+	position: relative;
+	width: 9.259rem;
+	height: 1.5rem;
+	margin-left: 2.9rem;
+	}
+.search input{
+	width: 7rem;
+    height: 1rem;
+    padding: 0 1.296rem;
+    border-radius: .5rem;
+    margin-top: 0.3rem;
+	font: 0.5rem/1 Helvetica;
+	}
+.search span{
+	position: absolute;
+    width: .925rem;
+    height: .925rem;
+    left: .370rem;
+    top: .370rem;
+    background: url(../img/sprites1.png) no-repeat;
+    background-position: -9.407rem .0556rem;
+    background-size: 14.2rem 4.537rem;
+	}
+.head > a{
+	position: absolute;
+    top: 0;
+    right: 0;
+    height: 1.5rem;
+    padding-right: 0.2rem;
+    color: #fff;
+    font: .583rem/1.667rem helvetica;
+	}
+	
+/*main*/
+#main{
+	position: absolute;
+    top: 1.5rem;
+    left: 0;
+    width: 15rem;
+	bottom: 2rem;
+    overflow: auto;
+	}
+
+/*slide*/
+.slide{
+	position: relative;
+    width: 15rem;
+    height: 7.291rem;
+	}
+.swiper-container{
+	width: 15rem;
+    height: 7.291rem;
+	}
+.swiper-slide img{
+	width: 100%;
+	height: 100%;
+	}
+.swiper-pagination {
+  position: absolute;
+  left: 0;
+  text-align: center;
+  bottom: 5%;
+  width: 100%;
+  z-index: 1;
+	}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 10px;
+  background: #999;
+  box-shadow: 0px 1px 2px #555 inset;
+  margin: 0 8px;
+  cursor: pointer;  
+	}
+.swiper-active-switch {
+  background: #fff;
+	}
+
+
+
+/*banner*/
+.banner{
+	position: relative;
+    width: 15rem;
+    height: 7.291rem;
+	overflow: hidden;
+	}
+.banner .img-list{
+	position: absolute;
+    left: 0;
+    top: 0;
+    width: 900%;
+    height: 100%;
+	}
+.banner .img-li{
+	float: left;
+    width: 15rem;
+    height: 100%;
+	}
+.banner .img-li img {
+    width: 100%;
+    height: 100%;
+	}
+.banner .btn-list{
+	position: absolute;
+    left: 0;
+    bottom: 0.75rem;
+    width: 100%;
+    text-align: center;
+    height: 0.25rem;
+	}
+.banner .btn-list li{
+	display: inline-block;
+	margin: 0.333rem;
+	}
+.banner .btn-list li a{
+	display: block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+	}
+.banner .btn-list li a.active{
+	background-color: #fff;
+	}
+	
+/*nav*/
+.nav{
+	margin-top: 0.4rem;
+	text-align: center;
+	}
+.nav a{
+	float: left;
+	width: 25%;
+	padding-bottom: 0.45rem;
+	font: 0.5rem/1 Helvetica;
+	}
+.nav img{
+	width: 1.6rem;
+    height: 1.6rem;
+    margin-bottom: 0.24rem;
+	}
+.nav span{
+	display: block;
+	height: .5rem;
+	color: #686868;
+	}
+	
+/*滑动广告*/
+.new-slide{
+	height: 4.1rem;
+	}
+	
+/**/
+.sellkill{
+	overflow: hidden;
+	}
+.sell-top{
+	height: 1.75rem;
+	font: 0.6rem/1.75rem helvetical;
+	display: inline;
+	}
+.sell-top h2{
+	float: left;
+	}
+.sell-top h2 .icon-clock{
+	float: left;
+    width: 1rem;
+    height: 1rem;
+    background: url(../img/sprites1.png) no-repeat;
+	background-size: 15rem 4.791rem;
+    background-position: -2.72rem 0;
+    margin: 0.5rem 0.2rem 0 0.3rem;
+	}
+.sell-top h2 .name{
+	float: left;
+    font-weight: normal;
+    color: red;
+    font-size: 0.6rem;
+    letter-spacing: .041rem;
+    margin-right: 0.5rem;
+	}
+.sell-time{
+	float: left;
+	display: inline;
+	padding: 0 0.5rem;
+	}
+.sell-time time{
+	padding: 0.1rem;
+    background: #716d6d;
+    color: #fff;
+	}
+.sell-more{
+	float: right;
+    display: inline;
+	}
+.sell-more .icon-clock{
+	float: right;
+    width: 1rem;
+    height: 1rem;
+    background: url(../img/sprites1.png);
+    background-position: -4rem 0;
+	background-size: 15rem 4.791rem;
+    margin: 0.59rem 0.2rem 0 0.5rem;
+	}
+.sell-list{
+	width: 34.5rem;
+    border-bottom: 1px solid #f2d5d7;
+	}
+.sell-list li{
+	float: left;
+	width: 4.3125rem;
+	display: inline;
+	text-align: center;
+	}
+.sell-lisr li a{
+	display: block;
+    padding: 0 .458rem;
+    border-right: .020rem solid #f2d6d8;
+	}
+.sell-list li a img{
+	width: 3.75rem;
+    height: 3.75rem;
+	}
+.sell-list li .discount-price{
+	display: block;
+    font-size: 0.75rem;
+    color: #ea4b4b;
+    margin: 0.3rem 0;
+	}
+.sell-list li .initial-price{
+	color: #888;
+    font-size: 0.6rem;
+    text-decoration: line-through;
+	}
+	
+.hot-list{
+	border-bottom: 0.02rem solid #f2d5d7;
+	}
+.hot-list li{
+	float: left;
+    width: 33.333%;
+	}
+.hot-list li a{
+	float: left;
+	width: 100%;
+	}
+.hot-list li a img{
+	width: 100%;
+	height: 5.74rem;
+	box-sizing: border-box;
+	border-right: 0.02rem solid #f2d5d7;
+	}
+.flash-list{
+	border-bottom: 0.02rem solid #f2d5d7;
+	}
+.flash-list li{
+	float: left;
+	width: 50%;
+	}
+.flash-list li a{
+	float: left;
+	width: 100%;
+	}
+.flash-list li a img{
+	width: 100%;
+	height: 5.74rem;
+	box-sizing: border-box;
+	border-right: 0.02rem solid #f2d5d7;
+	}
+	
+/*特色市场*/
+.classifycial .banner{
+	height: 4.208rem;
+	}
+.classifycial .banner img-list{
+	width: 200%;
+	}	
+.banner-h2{
+	font-weight: 600;
+    padding: 0.4rem 0 0.4rem 1rem;
+    color: #db5477;
+    border-bottom: .020rem solid #f2d5d7;
+	}
+.classify-li{
+	float: left;
+    width: 50%;
+	height: 4.219rem;
+	}
+.big-li{
+	height: 6.9rem;
+	}
+.classify-li a{
+	float: left;
+	width: 100%;
+	height: 100%;
+	}
+.classify-li a img{
+	float: left;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	border-bottom: .020rem solid #f2d5d7;
+	}
+.classify-li2{
+	height: 3.791rem;
+	}
+	
+/*主题街*/
+.theme-street .banner {
+    height: 4.208rem;
+}
+.theme-street .banner img-list{
+	width: 200%;
+	}
+.theme-street .big-li{
+	height: 8.438rem;
+	}
+.theme-street .classify{
+	height: 4.219rem;
+	}	
+.small-li{
+	float: left;
+	width: 25%;
+	height: 4.219rem;
+	}
+.small-li a{
+	float: left;
+	width: 100%;
+	height: 100%;
+	}
+.small-li a img{
+	float: left;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	border-bottom: .020rem solid #f2d5d7;
+	}
+	
+/*brand-street*/
+.brand-recommend{
+	margin-bottom: .333rem;
+	}
+.brand-recommend .classify-li {
+    width: 4.291rem;
+    height: 7.875rem;
+	}
+.brand-list .li-1{
+	width: 5.625rem;
+	}
+
+/*jd-home*/
+.jd-home{
+	width: 15rem;
+	}
+.jd-home a{
+	display: block;
+	}
+.jd-home a img{
+	width: 100%;
+	height: 5rem;
+	}
+	
+/*youlike*/
+.like-li{
+	float:left;
+	width: 50%;
+	margin-bottom: 0.1rem;
+	}
+.title{
+	height: 1.604rem;
+    line-height: 1.604rem;
+    padding-top: .1875rem;
+	}
+.title h2{
+	float: left;
+    color: #999;
+    margin-left: 0.4rem;
+	}
+.title a{
+	float: right;
+	}
+.title a .text{
+	font-size: .458rem;
+    letter-spacing: .0416rem;
+    color: #db4f73;
+	}
+.title a .icon-person {
+	float: right;
+    width: .666rem;
+    height: .666rem;
+    background: url(../img/sprites1.png) no-repeat;
+	background-position: -3rem -1rem;
+    background-size: 15rem 4.791rem;
+	margin: 0.4rem 0.2rem 0 0.2rem;
+	}
+.like-li .li{
+    display: block;
+    width: 100%;
+    text-align: center;
+	}
+.like-img{
+	width: 7rem;
+	margin: 0 auto;
+    border-radius: .300rem;
+	}
+.like-img img{
+	width: 100%;
+	height: 7rem;
+	}
+.like-p{
+	overflow: hidden;
+    width: 6.625rem;
+    height: 1.166rem;
+    margin: .208rem auto .291rem;
+    font: .5rem/.584rem helvetica;
+    color: #333;
+	border-bottom: .041rem solid #f2d5d7;
+	}
+.like-text{
+    height: 1rem;
+    margin: 0 auto;
+    font: .625rem/.7916rem helvetica;
+    color: #df6785;
+    padding: 0.2rem;
+	}
+.like-text .price{
+	float: left;
+    color: #df6785;
+    padding-left: 0.2rem;
+	}
+.like-text .smilarity{
+	float: right;
+    height: .666rem;
+    padding: 0 .2rem .1rem .2rem;
+    margin-right: .4rem;
+    border-radius: .125rem;
+    border: .041rem solid #e4acb7;
+    font: .458rem/.666rem helvetica;
+    color: #999;
+	}
+	
+/*操作*/
+.operation {
+	margin-top: 0.2rem;
+    text-align: center;
+    border-top: 1px solid #bfbfbf;
+	}
+.operation .nav-wrap {
+    display: inline-block;
+    vertical-align: top;
+	}
+.operation .box{
+	box-sizing: border-box;
+	border-bottom: 1px solid #bfbfbf;
+	}
+.load-more{
+	height: 1.375rem;
+    font: .583rem/1.333rem helvetica;
+    text-align: center;
+	}
+.load-more a{
+	color: #999;
+	}
+	
+.login{
+	height: 2.1rem;
+	font: 0.6rem/2rem Helvetica;
+	}
+.nav-wrap .text{
+	color: #999;
+	}
+
+.app-nav{
+	height: 3rem;
+	}
+.app-nav .nav-wrap > a{
+	float:left;
+	width: 4.25rem;
+	}
+.app-nav .app-bg{
+	display: block;
+	width: 1.4rem;
+	height: 1.4rem;
+	position: relative;
+	margin: 0.3rem auto 0;
+	background: url(../img/sprites1.png);
+	background-size: 15rem 4.791rem;
+	}
+.app-nav .bg1 {
+    background-position: -5rem 0;
+	}
+.app-nav .bg2 {
+    background-position: -6.65rem 0;
+	}
+.app-nav .bg3 {
+    background-position: -8.3rem 0;
+	}
+.app-nav .app-p{
+	margin-top: 0.1rem;
+    color: #999;
+	}
+	
+.copyright{
+	height: 1.8rem;
+	font: 0.5rem/1.8rem helvetival;
+	}
+	
+/*底部*/
+#footer{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 15rem;
+	height: 1.9rem;
+	background: #fff;
+	}
+.footer-list{
+	height: 100%;
+	}
+.footer-list li{
+	float: left;
+	width: 25%;
+	height: 100%;
+	}
+.footer-list li a{
+	display: block;
+	width: 2.375rem;
+	height: 100%;
+	margin: 0 auto;
+	background: url(../img/sprites1.png);
+	background-size: 15rem 4.791rem;
+	}
+.footer-list .foot-bg1{
+	background-position: 0 -2.8rem;
+	} 
+.footer-list .foot-bg2{
+	background-position: -3rem -2.8rem;
+	} 
+.footer-list .foot-bg3{
+	background-position: -3rem -2.8rem;
+	} 
+.footer-list .foot-bg4{
+	background-position: -9rem -2.8rem;
+	} 

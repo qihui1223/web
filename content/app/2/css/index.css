@@ -1,0 +1,250 @@
+@charset "utf-8";
+/* CSS Document */
+/*禁止iphone中Safari字自动号调整*/
+html{
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	}
+/*去除iphone中input样式*/
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+
+input{
+	-webkit-appearance: none;
+	resize: none;
+	}
+/* 取消链接高亮  */
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article, 
+aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); }
+
+/* 设置HTML5元素为块 */
+article, aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section {
+display: block;
+}
+/* 图片自适应 */
+img {
+max-width: 100%;
+height: auto;
+width:auto\9; /* ie8 */
+-ms-interpolation-mode:bicubic;/*为了照顾ie图片缩放失真*/
+}
+
+/* 初始化 */
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article, 
+aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section{margin:0; padding:0; border:none;}
+body{font: normal 14px/1.5 Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei;background: #fff; color:#666;}
+em,i{font-style:normal;}
+strong{font-weight: normal;}
+.clearfix:after{content:""; display:block; visibility:hidden; height:0; clear:both;}
+.clearfix{zoom:1;}
+a{text-decoration:none; color:#969696; font-family: '宋体',Microsoft YaHei,Tahoma,Arial,sans-serif;}
+a:hover{color:#de4943; text-decoration:none;}
+ul,ol{list-style:none;}
+h1, h2, h3, h4, h5, h6{ font-size:100%; font-family: Microsoft YaHei;}
+img{border: none;}
+
+body{min-width: 320px;}
+
+/* 精灵图 */
+.header a,.search span{background:url("../img/icon.png"/*tpa=http://www.bestcreeper.com/code5/img/icon.png*/)no-repeat; background-size: 100px 500px;}
+
+
+/*css*/
+.head{
+	position: relative;
+	height: 44px;
+	padding: 10px 15px 0;
+	color: #fff;
+	background: #2472B3;
+	text-align: center;
+	}
+.head h2{
+	font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 5px;
+	}
+	
+.search{
+	position: relative;
+	height: 32px;
+	padding: 18px 10px;
+	background: #f5f5f5;
+	}
+.search input{
+	line-height: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+	border-radius: 6px;
+    text-indent: 5px;
+    outline: none;
+	}
+
+.sec h2{
+	line-height: 50px;
+    padding: 0px 20px;
+    font-weight: normal;
+    font-size: 18px;
+    background: #f5f5f5;
+	}
+.sec h2 a{
+	float: right;
+    color: #fb5f5f;
+    font-size: 15px;
+	}
+.sec h2 a:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: block;
+    border-top: 1px solid #de4943;
+    border-right: 1px solid #de4943;
+    transform: rotate(45deg);
+    float: right;
+    margin-top: 18px;
+	}
+
+
+.section1 ul{
+	display: flex;
+	-webkit-display: flex;
+	padding: 0 5px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	}	
+.section1 ul li{
+	flex: 3;
+	line-height: 35px;
+	text-align: center;
+	background: #E7E7E7;
+	margin: 5px 2px;
+	border-radius: 5px;
+	}
+	
+.section2 ul{
+	padding: 10px 10px 0;
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	}
+.section2 ul li{
+	float: left;
+    width: 49%;
+	margin-bottom: 10px;
+	}
+.section2 ul li a img{
+	width: 100%;
+	display: block;
+	}
+.section2 ul li:nth-child(1),
+.section2 ul li:nth-child(3){
+	margin-right: 2%;
+	}
+.section2 ul li a p{
+	text-align: center;
+    padding-top: 5px;
+	}
+
+
+	
+.section3 ul{
+	display: flex;
+	background: #f5f5f5;
+	margin: 0 5px;
+	}
+.section3 ul li{
+	float: left;
+    width: 49%;
+	margin-bottom: 10px;
+	}
+.section3 ul li:nth-child(1){
+	margin-right: 2%;
+	}
+.section3 ul li p{
+	text-align: center;
+	padding-bottom: 3px;
+	}
+.section3 > ul > li p:nth-child(1){
+	font-size: 16px;
+	color: #333;
+	margin-top: 20px;
+	}
+.section3 ul li ul{
+	display: flex;
+	padding: 0;
+	}
+.section3 ul li ul li:nth-child(1){
+	margin-right: 3px;
+	}
+.section3 ul li ul li a img{
+	width: 100%;
+	display: block;
+	}
+
+	
+.section4 ul{
+	border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 0 10px;
+	}
+.section4 ul li{
+	border-bottom: 1px solid #ddd;
+    padding: 10px 0 5px;
+	}
+.section4 ul li:last-child{
+	border: 0;
+	}
+.section4 ul li .text{
+	float: left;
+	}
+.section4 ul li .text h3{
+	font-weight: normal;
+	font-size: 16px;
+	cursor: pointer;
+	}
+.section4 ul li .text p{
+	color: #999;
+	}
+.section4 ul li a{
+	float: right;
+	}
+.section4 ul li a img{
+	width: 45px;
+	height: 45px;
+	}
+	
+.section5 ul{
+	padding: 10px 10px;
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	}
+.content .text{
+	float: left;
+	width: 70%;
+	}
+.content a{
+	float: right;
+	}
+.section5 ul li a img{
+	width: 80px;
+	height: 80px;
+	}
+.section5 ul li .text h3{
+	font-weight: normal;
+	font-size: 16px;
+	cursor: pointer;
+	color: #333;
+	}
+.push p > a{
+	color: #f40;
+    float: left;
+    margin-right: 10px;
+	}
+	
+.footer{
+	text-align: center;
+	padding: 10px 0;
+	}
+.footer p{
+    margin-top: 5px;
+	}

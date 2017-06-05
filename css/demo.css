@@ -12,10 +12,12 @@ body{
 	font-size: 12px;
 	}
 .demo{
-	font-size: 20px;
-	font-weight: 500;
-	text-decoration:underline;
+	font-size: 15px;
+    font-weight: 500;
+    color: #999;
 	}
+	
+	
 #mulu{
 	z-index: 9999;
 	position: relative;

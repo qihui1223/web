@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* 禁用iPhone中Safari的字号自动调整 */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+/* 去除iPhone中默认的input样式 */
+input[type="submit"],
+
+input[type="reset"],
+
+input[type="button"],
+
+input{-webkit-appearance:none; resize: none;}
+/* 取消链接高亮  */
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article, 
+aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); }
+/* 设置HTML5元素为块 */
+article, aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section {
+display: block;
+}
+/* 图片自适应 */
+img {
+max-width: 100%;
+height: auto;
+width:auto\9; /* ie8 */
+-ms-interpolation-mode:bicubic;/*为了照顾ie图片缩放失真*/
+}
+/* 初始化 */
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article, 
+aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section{margin:0; padding:0; border:none;}
+body{font: normal 14px/1.5 Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei;background: #fff; color:#666;}
+em,i{font-style:normal;}
+strong{font-weight: normal;}
+.clearfix:after{content:""; display:block; visibility:hidden; height:0; clear:both;}
+.clearfix{zoom:1;}
+a{text-decoration:none; color:#969696; font-family: '宋体',Microsoft YaHei,Tahoma,Arial,sans-serif;}
+a:hover{color:#de4943; text-decoration:none;}
+ul,ol{list-style:none;}
+h1, h2, h3, h4, h5, h6{ font-size:100%; font-family: Microsoft YaHei;}
+img{border: none;}
+
+body{min-width: 320px;}
+
+/* 精灵图 */
+.header a,.search span{background:url("../img/icon.png"/*tpa=http://www.bestcreeper.com/code5/img/icon.png*/)no-repeat; background-size: 100px 500px;}
+
+/* CSS样式开始 */
+
+/* 头部 */
+.header{ height:44px; background:#2472B3; color:#fff; padding:10px 15px 0; position:relative;}
+.header h2{width:220px; text-align: center; font-size: 20px;font-weight: normal; position:absolute; left:50%; margin-left: -110px;}
+.header a{width:25px; height:25px; float:left; background-position: 0 -40px;}
+.header a:nth-of-type(2){background-position: -61px -41px; float:right;}
+
+/* 搜索 */
+.search{height:32px; background:#f5f5f5; padding:18px 20px; position:relative;}
+.search input{line-height: 30px; text-indent: 5px; width:100%; outline:none; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;}
+.search span{width:30px; height:30px; background-position: 0 -72px; position:absolute; top: 19px; right:21px; cursor: pointer;}
+
+/* 分类 */
+.clas h2{line-height: 50px; background:#f5f5f5; padding:0 20px; font-weight: normal; font-size: 18px;}
+.clas h2 a{float:right; color:#de4943; font-size: 14px;}
+.clas h2 a:after{content:''; width:10px; height:10px;display:block; border-top: 1px solid #de4943; border-right: 1px solid #de4943; transform:rotate(45deg);float:right; margin-top: 20px;}
+
+.clas1 ul{border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; padding:0 3px; display:flex;}
+.clas1 ul li{line-height:35px; background:#E7E7E7; text-align:center; border-radius:5px; margin:5px 2px; flex:3;}
+
+.clas2 ul{border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; padding:10px 10px 0;}
+.clas2 ul li{width:49%; float:left; margin-bottom: 10px;}
+.clas2 ul li:nth-of-type(1),.clas2 ul li:nth-of-type(3){margin-right: 2%;}
+.clas2 ul li:after{content:'淡奶油馒头';display:block; text-align: center;}
+.clas2 ul li:nth-of-type(2):after{content:'台式三杯鸡翅';}
+.clas2 ul li:nth-of-type(4):after{content:'#夏日时光#五香咸鸭蛋';}
+.clas2 ul li:nth-of-type(3):after{content:'炝拌鸡丝海带';}
+.clas2 ul li img{width:100%; display:block;}
+
+.clas3 ul{ background:#f5f5f5; display:flex; padding:0 5px;}
+.clas3 ul li{flex:1; text-align: center; background:#fff; margin:0 5px;}
+.clas3 ul li ul{display:flex; padding:0;}
+.clas3 ul li ul li{flex:1; margin:0;}
+.clas3 ul li ul li:nth-of-type(1){margin-right: 3px;}
+.clas3 ul li ul li img{width:100%; display:block;}
+.clas3 ul li p{line-height: 30px;}
+.clas3 ul li p:nth-of-type(1){color:#333; font-size: 16px; margin-top: 20px;}
+
+.clas4 ul{border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; padding:0 10px;}
+.clas4 ul li{border-bottom: 1px solid #ddd; padding:10px 0 5px; margin-bottom: -1px;}
+.clas4 ul li a{float:right;}
+.clas4 ul li a img{width:45px; height:45px;}
+.clas4 .tet{float:left;}
+.clas4 .tet h3{font-weight: normal; font-size: 16px; cursor:pointer;}
+.clas4 .tet p{color:#999;}
+
+.clas5 ul{border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; padding:10px 10px;}
+.clas5 ul li a{float:right;}
+.clas5 ul li a img{width:80px; height:80px;}
+.clas5 .tet{float:left; width:70%;}
+.clas5 li:nth-of-type(2) .tet{width:100%;}
+.clas5 .tet h3{font-weight: normal; font-size: 16px; cursor:pointer; color:#333;}
+.clas5 .tet a{color:#f40; float:left; margin-right: 10px;}
+
+
+
+.footer{text-align: center; padding:10px 0;}
+.footer p{margin-top: 5px;}
+
+
+
+
+
