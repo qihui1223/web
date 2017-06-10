@@ -2,7 +2,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 html{ -webkit-text-size-adjust:none;}
 body{ font-size:12px; line-height:24px; background:#fff;  -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased;  font-smoothing: antialiased;  color:#333;}
 input,textarea{ resize:none; font-family:"Microsoft YaHei"; border-radius:0; background: #fff;border: 0; -webkit-appearance: none;}
-img{ border:none;vertical-align:middle; -ms-interpolation-mode: bicubic;}
+img{ border:none;vertical-align:middle; -ms-interpolation-mode: bicubic; max-width:100%;}
 ul,li{ list-style:none;}
 a{ text-decoration:none; color:#333; outline:none; -webkit-transition: color 0.3s ease; transition: color 0.3s ease; }
 a:hover{ text-decoration: none;}
@@ -32,4 +32,7 @@ h1,h2,h3,h4,h5,h6{
 .clean{
 	padding-left: 0;
 	padding-right: 0;
+	}
+c-div{
+	min-height: 80px;
 	}
