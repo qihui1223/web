@@ -36,7 +36,7 @@ body{
 	width: 180px;
 	padding-left: 10px;
 	line-height: 36px;
-	background: #358000;
+	background: #00bbbb;
 	color: #fff;
 	font-size: 15px;
 	}
@@ -44,7 +44,7 @@ body{
 #mulu ul{
 	z-index: 99999;
 	position: absolute;
-	background-color: #60a411;
+	background-color: #f7f7f7;
 	width: 190px;
 	height: 486px;
 	top: 36px;
@@ -58,11 +58,12 @@ body{
 #mulu ul li .tx{
 	height: 35px;
 	line-height: 35px;
-	background: #559b0d;
+	background: #f5f5f5;
+	text-align: center;
 	}
 #mulu ul li .tx a{
 	font-size: 15px;
-	color: #fff;
+	font-weight: bold;
  	-webkit-transition: color 0.1s ease-out 0s;
     -moz-transition: color 0.1s ease-out 0s;
     -ms-transition: color 0.1s ease-out 0s;
@@ -142,13 +143,14 @@ body{
 	display: block;
 	}
 #mulu ul li:hover{
-	background-color: #fcfcfc;
+	background-color: #00bbbb;
 	}
 #mulu ul li:hover .tx{
-	background-color:#f5f5f5
+	background-color:#00bbbb;
+	
 	}
 #mulu ul li:hover .tx a{
-	color: #333;
+	color: #fff
 	}
 #mulu ul li:hover .center{
 	display:block;
@@ -157,10 +159,10 @@ body{
 #mulu ul li:hover dl{
 	color:#6e6e6e
 	}
-#mulu ul li:hover a{
+#mulu ul li:hover .center a{
 	color:#666666
 	}
-#mulu ul li:hover a:hover{
+#mulu ul li:hover  .center a:hover{
 	color:#cd0606
 	}
 

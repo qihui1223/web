@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>点击图片放大</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- Add jQuery library -->
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<!-- Add fancyBox main JS and CSS files -->
+<script type="text/javascript" src="./source/jquery.fancybox.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="./source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.fancybox').fancybox({
+            openEffect : 'elastic',
+            openSpeed  : 150,
+            closeEffect : 'elastic',
+            closeSpeed  : 150,
+            closeClick : true,
+        });
+    });
+</script>
+<style type="text/css">
+    .fancybox-custom .fancybox-skin {
+        box-shadow: 0 0 50px #222;
+    }
+
+    body {
+        max-width: 700px;
+        margin: 0 auto;
+		margin-top: 100px
+    }
+</style>
+</head>
+<body>
+	<div style="text-align: center;">
+    	
+    	<p>
+            <a class="fancybox" href="./images/1_b.jpg" data-fancybox-group="gallery">
+                <img src="./images/1_s.jpg" alt="" />
+                <p><h3>点击图片放大</h3></p>
+            </a>
+            
+        </p>
+    </div>
+</body>
+</html>

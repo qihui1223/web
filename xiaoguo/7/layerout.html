@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>修改密码弹出层</title>
+<style>
+
+.content{width:400px; margin: 0 auto;margin-top: 100px}
+.username{padding:0 10px;line-height:25px;height: 65px;font-size: 16px;}
+.username > span{margin-left: 8px;color: #1fb5f4;}
+.username p span a{color: #1fb5f4; padding: 8px}
+.username p span a:hover{color: red;}
+/*弹出层*/
+.layui-layer-title{text-align: center}
+#layerout {display: none; }
+#layerout .loginitem {margin-left: 20px;margin-top: 30px; }
+#layerout .loginitem input { width: 353px;height: 32px;padding-left: 5px;border: 1px solid #ccc; }
+#layerout .loginitem a {display: block;width: 353px;height: 50px;text-align: center;line-height: 50px;color: #fff;font-size: 30px;background: #428AB4; }
+</style>
+</head>
+<body>
+    <div class="content">
+        <div class="username">
+           <span> 欢迎您: 32321</span>
+            <p style="margin-top: 5px">
+                <span><a onclick="userCheck()">修改密码</a></span>
+            </p>
+            <form method="post">
+               <div id="layerout">
+                 <div class="loginitem">新密码<input id="psd1" type="password" placeholder="请输入密码"/></div>
+                 <div class="loginitem">在输入一次<input id="psd2" type="password" placeholder="请输入密码" /></div>
+               </diV>
+             </form>
+        </div>
+    </div>
+    <p style="text-align: center">layer弹出层,点击修改密码实现弹出层</p>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/layer/layer.js"></script>
+<script>
+/*修改密码*/	
+function userCheck(){
+  parent.layer.open({
+    type:1,//弹出1个页面层
+    title:'<span style="color: #339ef7;font-size: 17px;">修改密码</span>',
+    shadeClose: true, //点击遮罩关闭
+    area:["390px","300px"],
+    shadeClose:true,
+    skin: 'layer-ext-moon',
+    content:$("#layerout"),
+    btn: ['确定','取消'],
+    yes : function(index) {     
+	   if(check()){
+		    /*ajax*/
+      		// alert(document.getElementById("psd1").value);
+		    layer.close(index);
+		   }
+      
+    }
+  })
+  /*正则检验*/  
+  function check(){
+      var psd1 = document.getElementById("psd1").value;    
+      var psd2 = document.getElementById("psd2").value;        
+    
+    if(psd1 == "") {  
+       layer.alert('密码不能为空', {
+		  icon: 2,
+		  skin: 'layer-ext-moon',
+		})
+        return false;
+    } 
+       
+    if(psd2 !== psd1) {  
+       layer.alert('两次密码必须一致', {
+		  icon: 2,
+		  skin: 'layer-ext-moon' 
+		})	
+       return false;  
+    } 
+	/*修改成功提示*/
+	if(psd2 === psd1 && psd1 !== ''){
+	   layer.alert('修改成功', {
+		  icon: 1,
+		  skin: 'layer-ext-moon' 
+	   })	
+	   return true;
+	}
+  }  
+}		
+</script>
+</html>

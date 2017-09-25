@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>分页插件带模拟数据</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<link rel="stylesheet" href="css/demo.css">
+<link href="css/page.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="content-right">
+		<ul id="file_list" class="yhzx_31_imgs">
+	        <li id="myThing" class="yhzx_31_li"  style="display: block;">
+	            <span class="yhzx_31_li_text">分页样式(附带模拟数据)</span>
+	            <table with= 100%; class="user_bj">
+	                <tr class="user_bj_head">
+	                    <td class="fore1">分页</td>
+	                    <td class="fore2">编号</td>
+	                    <td class="fore3">内容</td>
+	                    <td class="fore4">时间</td>
+	                    <td class="fore5">状态</td>
+	                    <td class="fore6">操作</td>
+	                </tr>
+	                <tr>
+	                    <table class="user_bj_content" style="border-collapse:collapse;">
+	                        <tr class="user_bj_list">
+	                            <td class="fore1">001</td>
+	                            <td class="fore2" title="分页">分页</td>
+	                            <td class="fore3">内容123</td>
+	                            <td class="fore4">2017-8-5</td>
+	                            <td class="fore5">完成</td>
+	                            <td class="fore6"><a target="_blank" onclick=""><a href="#">查看</a></a></td>
+	                        </tr>
+	                        <tr class="user_bj_list">
+	                            <td class="fore1">001</td>
+	                            <td class="fore2" title="分页">分页</td>
+	                            <td class="fore3">内容123</td>
+	                            <td class="fore4">2017-8-5</td>
+	                            <td class="fore5">完成</td>
+	                            <td class="fore6"><a target="_blank" onclick=""><a href="#">查看</a></a></td>
+	                        </tr>
+	                        <tr class="user_bj_list">
+	                            <td class="fore1">001</td>
+	                            <td class="fore2" title="分页">分页</td>
+	                            <td class="fore3">内容123</td>
+	                            <td class="fore4">2017-8-5</td>
+	                            <td class="fore5">完成</td>
+	                            <td class="fore6"><a target="_blank" onclick=""><a href="#">查看</a></a></td>
+	                        </tr>
+	                        <tr class="user_bj_list">
+	                            <td class="fore1">001</td>
+	                            <td class="fore2" title="分页">分页</td>
+	                            <td class="fore3">内容123</td>
+	                            <td class="fore4">2017-8-5</td>
+	                            <td class="fore5">完成</td>
+	                            <td class="fore6"><a target="_blank" onclick=""><a href="#">查看</a></a></td>
+	                        </tr>
+	                        <tr class="user_bj_list">
+	                            <td class="fore1">001</td>
+	                            <td class="fore2" title="分页">分页</td>
+	                            <td class="fore3">内容123</td>
+	                            <td class="fore4">2017-8-5</td>
+	                            <td class="fore5">完成</td>
+	                            <td class="fore6"><a target="_blank" onclick=""><a href="#">查看</a></a></td>
+	                        </tr> 
+	                    </table>
+	                </tr>
+	            </table>
+	            <!--分页-->
+	            <div style="width: 100%; height: 50px; text-align: center;margin: 10px auto;">
+	                <div class="ui-page" id="ui-page"></div>
+	            </div>
+	            <!--分页end-->
+	        </li>
+	     </ul>   
+	</div>
+</body>	
+<script src="js/jquery.min.js"></script>
+<script src="data/data.js" type="text/javascript"></script>
+<script src="js/sendAjax.js" type="text/javascript"></script>
+<script src="js/page.js" type="text/javascript"></script>
+
+
+<script>
+$(function(){
+
+	/*分页初始化页面 */	
+	var initTotalPageNum = data.data.length;   //计算页面总数
+	
+	/*我的办件初始化分页*/
+	$("#myThing #ui-page").paging({pageSize:5,totalPage:initTotalPageNum}, sendAjax1);//sendAjax1,分页回调函数
+	
+		
+})
+
+</script>
+</html>
