@@ -1,0 +1,340 @@
+@charset "utf-8";
+/* CSS Document */
+/*首页*/
+.view{height:100%; no-repeat center center;background-size:100% 100%;box-sizing:border-box;}
+.row{display:table;}
+.w{width:100%;}
+.view-header{height:20%; background:url('../img/topbg.jpg')}
+.head_main{ width: 1200px; margin:0px auto; height:100px;}
+.head_name{ float:left; padding:0px; margin:0px; width:480px;}
+.head_name h1{ width:480px; height:60px; margin-top:70px;}
+.head_name h1 a{ display:block; background:url(../img/name.png) no-repeat; width:480px; height:80px; text-indent:-99999px;cursor: pointer;}
+
+
+.clearfloat {
+    zoom: 1;
+	}
+.top {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: #4178be;
+	}
+.top_main {
+    width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+	}
+.top_logo {
+    width: 260px;
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+	}
+.top_tit {
+    width: 170px;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    left: 295px;
+    font-size: 23px;
+    line-height: 50px;
+    color: #fff;
+	}
+.top_nav {
+    width: auto;
+    height: 35px;
+    position: absolute;
+    top: 15px;
+    margin-left: 410px;
+	}
+.top_nav a.return {
+    display: block;
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+	font-size: 23px;
+    line-height: 50px;
+    color: #fff;
+	}
+.js_search {
+    width: 350px;
+    height: 40px;
+    position: absolute;
+    right: 0px;
+    top: 23px;
+	}
+.js_search_02 {
+    float: left;
+    width: 260px;
+    line-height: 40px;
+    font-size: 15px;
+    height: 35px;
+    border-top: 1px solid #aec1cf;
+    padding-left: 10px;
+    border-bottom: 1px solid #aec1cf;
+    border-left: 1px solid #aec1cf;
+    border-right: none;
+    font-size: 13px;
+    color: #999;
+    text-indent: 10px;
+	}
+.js_search_03 {
+    float: left;
+    width: 75px;
+    line-height: 40px;
+    font-size: 15px;
+    height: 39px;
+    border: none;
+    background-color: #5D99D6;
+    color: #fff;
+    font-size: 20px;
+	}
+
+/*main*/
+.zc_01 {
+    width: 1200px;
+    margin: 20px auto;
+    background: #fff;
+    min-height: 758px;
+    padding: 30px 20px 0;
+	}
+.zc_01_02 {
+    width: 1160px;
+    height: 50px;
+	margin-bottom: 50px;
+    background: #f7f7f7;
+	}
+.zc_01_21 {
+    float: left;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #4178be;
+    font-size: 19px;
+    font-weight: bold;
+	}
+.zc_01_22 {
+    float: right;
+    height: 50px;
+    margin-right: 10px;
+    /*background: url(js_zc_10.png) 40px center no-repeat;*/
+	}
+.zc_01_22 span {
+    height: 50px;
+    display: inline-block;
+    line-height: 50px;
+    font-size: 13px;
+    color: #333;
+    margin-right: 10px;
+	}
+	
+.zc_01_03 {
+	position: relative;
+	margin: 0 auto;
+    width: 670px;
+	height: auto;
+    border-right: 1px solid #f2f2f2;
+	}
+.zc_01_31 {
+    height: 45px;
+    width: 670px;
+    margin-bottom: 5px;
+    position: relative;
+	}
+.zc_01_31 span {
+    float: left;
+    height: 45px;
+    line-height: 45px;
+    text-align: right;
+    width: 180px;
+    font-size: 15px;
+    color: #333;
+    padding-right: 10px;
+	}
+.zc_01_31 input {
+    float: left;
+    width: 415px;
+    height: 43px;
+    line-height: 45px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #d2d2d2;
+    padding-left: 15px;
+    color: #999;
+    font-size: 15px;
+	}
+.zc_01_32 {
+    float: left;
+    width: 670px;
+    height: 25px;
+	}
+.c2 {
+    float: left;
+    width: 300px;
+    height: 30px;
+    position: relative;
+    background: #f2f2f2;
+	}
+.code_deg {
+    float: left;
+    width: 100px;
+    height: 30px;
+    border-right: 1px solid #d9d9d9;
+    font-size: 15px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+	}
+.list_cell {
+    width: 960px;
+    margin-bottom: 10px;
+    overflow: hidden;
+	}	
+.cell_r1 {
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+	}
+.cell_r1 .c1 {
+    float: left;
+    width: 320px;
+    height: 40px;
+    padding-right: 10px;
+    font-size: 17px;
+    line-height: 40px;
+    text-align: right;
+	}
+.cell_r1 .c2 {
+    float: left;
+    width: 450px;
+    height: 40px;
+    position: relative;
+	}
+.cell_r1_input {
+    display: block;
+    width: 450px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: none;
+    border: 1px solid #e0e0e0;
+    font-size: 15px;
+    line-height: 38px;
+	}
+.cell_r1_input {
+    display: block;
+    width: 450px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: none;
+    border: 1px solid #e0e0e0;
+    font-size: 15px;
+    line-height: 38px;
+	}
+.yanzhenma {
+    float: left;
+    border: 1px solid #d2d2d2;
+    border-left: none;
+	}
+.content {
+    margin: 3.5px 0px;
+    padding: 0px 8px;
+    border-left: 1px solid #d2d2d2;
+	}
+.check_code_img {
+    display: block;
+    float: left;
+    width: 145px;
+    height: 39px;
+    border: none;
+    cursor: pointer;
+	}
+.zc_01_31 .zc_01_31_yzm {
+    width: 254px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 15px;
+	}
+.zc_01_31 input.message_number {
+    width: 153px;
+    font-size: 15px;
+    color: #ffffff;
+    background: #86c541;
+    height: 45px;
+    line-height: 45px;
+    float: left;
+    margin-left: 10px;
+    text-align: center;
+    cursor: pointer;
+	}
+#sendMobileCodeTime {
+    display: block;
+    width: 180px;
+    height: 45px;
+    position: absolute;
+    top: 0px;
+    left: 655px;
+    background-color: #A5A599;
+    border: none;
+    font-size: 15px;
+    line-height: 49px;
+    color: #fff;
+    text-align: center;
+	}
+.zc_01_33 {
+    width: 295px;
+    height: 45px;
+    float: none;
+    margin: auto;
+    position: static;
+	}
+.zc_01_31 .next {
+    width: 295px;
+    height: 55px;
+    font-size: 19px;
+    color: #ffffff;
+    background: #00aaef;
+    line-height: 55px;
+    border: none;
+    outline: none;
+    padding: 0px;
+    float: none;
+    margin: auto;
+	}
+	
+
+.hide{
+	height: 25px !important;
+    width: 250px !important;
+    position: relative;
+    left: 190px;
+    margin: 5px 0;
+	}
+
+#verify{
+	width: 280px;
+ 	border-right: none; 
+	}
+	
+/*倒计时*/
+.count{
+   display: none;
+   margin-top: 10px;
+   height: 40px;
+   width: 35%;
+   margin-left: 5%;
+   line-height: 40px;
+   border: 1px solid #9F9DBD;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   font-size: 1.6rem;
+ }
+	

@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>register</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/register.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<!--MAIN-->
+<div class="btn_main">
+	<div class="zc_01">
+    	<div class="zc_01_02 clearfloat">
+        	<div class="zc_01_21">账号填写</div>
+            <p class="zc_01_22"><span>以下带<font color="#fe4242">*</font>为必填项</span></p>
+        </div>
+        <div class="zc_01_03 clearfloat">
+        	<form action="#" onsubmit="return check()" method="post" >
+                <!--用户名-->
+                <div class="zc_01_31 clearfloat">
+                    <span>用户名：<font color="#fe4242">*</font></span>
+                    <input id="loginId" onblur="checkName()" type="text" placeholder="长度为4-30个字符，支持字母和数字组成，字母开头" maxlength="30"> 
+                </div>
+                <span class="hide" id="userMsg"></span><br>
+                <!--密码-->
+                <div class="zc_01_31 clearfloat">
+                    <span>密码：<font color="#fe4242">*</font></span>
+                    <input type="password" onblur="checkpwd()" class="password1" id="pwd" maxlength="18" placeholder="长度为6-18个字符，强度要求中">    
+                </div>
+                <span class="hide" id="psdMsg"></span><br>
+                <!--确认密码-->
+                <div class="zc_01_31 clearfloat">
+                    <span>确认密码：<font color="#fe4242">*</font></span>
+                    <input type="password" onblur="checkpwd2()" class="password2" id="psd2" placeholder="两次密码必须一致" maxlength="18">   
+                </div>
+                <span class="hide" id="psd2Msg"></span><br>
+                <!--身份证号-->
+                <div class="zc_01_31 clearfloat">
+                    <span>身份证号：<font color="#fe4242">*</font></span>
+                    <input type="text" id="idCard" onblur="checkIdCard()" name = "" placeholder="请填写正确身份证号号码">
+                </div>
+                <span class="hide" id="idMsg"></span><br>
+                <!--手机号码-->
+                <div class="zc_01_31 clearfloat">
+                    <span>手机号码：<font color="#fe4242">*</font></span>
+                    <input type="text" id="mobile" onblur="checkMobile()" name = "" placeholder="请填写正确手机号码">
+                </div>
+                <span class="hide" id="mobileMsg"></span><br>
+                <!--图片验证-->
+                <div class="zc_01_31  verification_code clearfloat">
+                    <span>图片验证码：<font color="#fe4242">*</font></span>
+                    <input id="verify" type="text" onblur="checkVerify()" placeholder="请填写正确的图片验证码" maxlength="4">
+                    <div class="yanzhenma">
+                        <div class="content" style="cursor:pointer;">
+                          <div style="height: 35px;width: 116px;">
+                            <img id="verifyImg" src="img/verifyCode.png" onclick="" style="cursor:pointer" class="check_code_img">
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="hide" id="verifyMsg"></span><br>
+                <!--短信验证-->
+                <div class="zc_01_31 clearfloat">
+                    <span>短信验证码：<font color="#fe4242">*</font></span>
+                    <input type="text" id="mobileRandCode" name="mobileRandCode" placeholder="请填写正确的短信验证码" class="zc_01_31_yzm" maxlength="6">
+                    <input type="button" id="getSms" class="message_number" value="免费获取验证码"/>
+                </div>
+                <span class="hide" id="sendMsg"></span><br>
+                <div class="zc_01_31 zc_01_33 clearfloat">
+                    <button class="next" type="submit" value="下一步">下一步</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!---->
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/register.js"></script>
+<script type="text/javascript">
+	var wait=60;
+	function time(t){
+		if(wait==0){
+			 t.removeAttribute("disabled");
+			 t.value="免费获取验证码";
+			 wait=60;
+		}else{
+			 t.setAttribute("disabled",true);
+			 t.value="重新发送("+wait+"s)";
+			 wait--;
+			 setTimeout(function(){
+				 time(t)
+			 },1000);
+		}
+	}
+	function checkVerify(){ //图片验证码	
+		var msg = document.getElementById('verifyMsg');
+			msg.innerHTML = "";  
+		var verify = document.getElementById('verify').value;  
+		if(verify == "") {  
+		   msg.innerHTML = "<font color = 'red'>图片验证码不能为空</font>";  
+		   return false;  
+		}
+		/*$.ajax({  
+			url:'',  
+			type:'GET',  
+			cache:false,   
+			dataType: 'json',
+			success: function(data) {
+				if(data){
+					
+				}
+			}
+		});*/
+		return true;  	
+	}
+	
+	var btn = document.getElementById("getSms");
+	btn.onclick = function(){
+		if(checkMobile() && checkVerify()){
+			time(this);	
+		}
+	}
+</script>
+</html>
