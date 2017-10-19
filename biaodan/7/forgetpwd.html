@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>密码修改</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/forgetpwd.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="main">
+<div class="main_content">
+	<form action="#" method="post">
+        <div id="wizard">
+            <ul id="status">
+                <li><a class="mmcz_tit tit1 On">1、身份验证</a></li>
+                <li> <a class="mmcz_tit tit2">2、设置新密码</a></li>
+                <li><a class="mmcz_tit tit3">3、完成</a></li>
+            </ul>
+            
+            <div class="items">
+                <div class="page">
+                    <!--手机号码-->
+                    <div class="page_content clearfloat">
+                        <span>手机号码：<font color="#fe4242">*</font></span>
+                        <input type="text" id="mobile" style="width: 415px" onblur="checkMobile()" name = "" placeholder="请填写正确手机号码">
+                    </div>
+                    <span class="hide" id="mobileMsg"></span><br>
+                    <!--图片验证-->
+                    <div class="page_content  verification_code clearfloat">
+                        <span>图片验证码：<font color="#fe4242">*</font></span>
+                        <input id="verify" type="text" onblur="checkVerify()" placeholder="请填写正确的图片验证码" maxlength="4">
+                        <div class="yanzhenma">
+                            <div class="content" style="cursor:pointer;">
+                              <div style="height: 36px;width: 118px;">
+                                <img id="verifyImg" src="img/verifyCode.png" onclick="" class="check_code_img">
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="hide" id="verifyMsg"></span><br>
+                    <!--短信验证-->
+                    <div class="page_content clearfloat">
+                        <span>短信验证码：<font color="#fe4242">*</font></span>
+                        <input type="text" id="mobileRandCode" name="mobileRandCode" placeholder="请填写正确的短信验证码" class="message_content" maxlength="6">
+                        <input type="button" onclick="checkMessage()" id="getSms" class="message_number" value="免费获取验证码"/>
+                    </div>
+                    <div class="btn_nav">
+                      <input type="button" class="next right btn" value="下一步&raquo;" />
+                    </div>
+                </div>
+                <div class="page">
+                    <div class="mmcz_list_cell">
+                        <div class="cell_tit">新密码：<font color="#fe4242">*</font></div>
+                        <div class="cell_list">
+                            <input type="password" id="newPass" name="newPass" class="newPassword" placeholder="输入新密码">
+                        </div>
+                   </div>
+                   <div class="mmcz_list_cell">
+                   		<div class="cell_tit">再次输入密码：<font color="#fe4242">*</font></div>
+                        <div class="cell_list">
+                            <input type="password" id="newPass2" name="newPass" class="newPassword" placeholder="再次输入新密码">
+                        </div>
+                   </div>
+                   <div class="btn_nav">
+                      <input type="button" class="prev btn" style="float:left" value="&laquo;上一步" />
+                      <input type="button" class="next right btn" value="下一步&raquo;" />
+                   </div>
+                </div>
+                <div class="page">
+                   <div class="page_text">
+                   	   <h4>Hello欢迎您！</h4>
+                       <p>请点击“确定”按钮完成修改。</p>
+                       <br/>
+                       <br/>
+                       <br/>
+                   </div>
+                   <div class="btn_nav">
+                      <input type="button" class="prev btn" style="float:left" value="&laquo;上一步" />
+                      <input type="button" class="next right btn" id="sub" value="确定" />
+                   </div>
+                </div>
+           </div>            
+        </div>
+    </form>    
+</div>
+</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/scrollable.js"></script>
+<script src="js/forgetpwd.js"></script>
+</html>

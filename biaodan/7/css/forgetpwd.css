@@ -1,0 +1,179 @@
+@charset "utf-8";
+/* CSS Document */
+/* CSS Document */
+
+/*top*/
+body{
+    /* font: 12px/160% 'sumsung','宋体'; */
+    font-family: 'microsoft yahei','微软雅黑','sumsung';
+    font-size: 13px;
+    margin: 0px;
+    line-height: 160%;
+    color: #000;
+}
+
+	
+/*top*/
+.clearfloat {
+    zoom: 1;
+	}
+.mmcz_all{ width:100%; height:auto; padding:20px 0px; overflow:hidden; position:relative;}
+.mmcz_main{ width:1000px; height:auto; min-height:440px; margin:0 auto; padding-top:40px; overflow:hidden; position:relative; background-color:#fff;}
+
+/*主体tit*/
+.mmcz_tit_main{ width:600px; height:45px; margin:0 auto; overflow:hidden; position:relative;}
+.mmcz_tit{ width:190px; height:45px; position:absolute; top:0px; background:url(../img/mmcz_tit_bg2.png) right no-repeat; font-size:17px; line-height:45px; color:#fff; cursor:pointer;}
+.mmcz_tit:hover,.mmcz_tit.On{ background:url(../img/mmcz_tit_bg1.png) right no-repeat; color:#fff;}
+.mmcz_tit.tit1{ padding-left:30px; left:0px; z-index:3;}
+.mmcz_tit.tit2{ padding-left:40px; left:160px; z-index:2;}
+.mmcz_tit.tit3{ padding-left:50px; left:320px; z-index:1;}
+.mmcz_tit.tit4{ padding-left:60px; left:400px; z-index:0;}
+
+.main_content{ width:800px; height:auto; /*min-height:345px;*/ margin:30px auto; overflow:hidden; position:relative;    background-color: #fff;}
+/*表单单元*/
+.mmcz_list_cell{ height:40px; margin-bottom:20px; overflow:hidden; position:relative;}
+.cell_tit{ width:125px; height:40px; padding-right:10px; position:absolute; top:0px; left:0px; font-size:17px; line-height:40px; text-align:right;}
+.cell_list{ width:450px; height:40px; position:absolute; top:0px; left:125px;}
+
+.newPassword{
+	display: block;
+    width: 360px;
+    height: 37px;
+    padding: 0px 10px;
+    background: none;
+    border: 1px solid #e0e0e0;
+    font-size: 15px;
+    line-height: 38px;
+	}
+
+.btn{
+	display: block;
+    float: left;
+    width: 180px;
+    height: 50px;
+    margin-right: 20px;
+    background-color: #32a589;
+    font-size: 17px;
+    line-height: 50px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+	}
+.prev{
+	background: #f7744a;
+	}
+
+
+
+
+
+/**/
+#main{
+	width: 100%;
+	height: auto;
+	background-color: #fff;
+	}
+#wizard {    
+	width: 1000px;
+    height: auto;
+    min-height: 440px;
+	margin-top: 20px;
+    padding-top: 40px;
+    overflow: hidden;
+    position: relative;
+	}
+#wizard .items{width:20000px; clear:both; position:absolute;}
+#wizard .right{float:right;}
+#status li{float:left;color:#fff;padding:10px 30px;}
+#status li.active{background-color:#369;font-weight:normal;}
+.input{width:240px; height:18px; margin:10px auto; line-height:20px; border:1px solid #d3d3d3; padding:2px}
+.page{margin-top: 20px;padding:20px 30px;width:725px;float:left;}
+.page_content{
+	position: relative;
+    height: 45px;
+    width: 670px;
+    margin-bottom: 10px;
+	}
+.page_content span {
+    float: left;
+    height: 45px;
+    line-height: 45px;
+    text-align: right;
+    width: 100px;
+    font-size: 15px;
+    color: #333;
+    padding-right: 10px;
+	}
+.page_content input {
+    float: left;
+    height: 43px;
+    line-height: 45px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #d2d2d2;
+    padding-left: 15px;
+    color: #999;
+    font-size: 15px;
+	}	
+.page h3{height:42px; font-size:16px; border-bottom:1px dotted #ccc; margin-bottom:20px; padding-bottom:5px}
+.page h3 em{font-size:12px; font-weight:500; font-style:normal}
+.page p{line-height:24px;}
+.page p label{font-size:14px; display:block;}
+.btn_nav{height:36px; line-height:36px; margin:20px auto;}
+
+.hide{
+	height: 25px !important;
+    width: 250px !important;
+    position: relative;
+    left: 115px;
+	}
+/*验证码*/
+.page_content #verify{
+	width: 280px;
+	border-right: none;
+	}
+.page_content .yanzhenma {
+    float: left;
+    border: 1px solid #d2d2d2;
+    border-left: none;
+}
+.yanzhenma .content {
+    margin: 3.5px 0px;
+    padding: 0px 8px;
+    border-left: 1px solid #d2d2d2;
+	}
+.check_code_img {
+    display: block;
+    float: left;
+    width: 145px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+	}
+/**/
+.page_content .message_content{
+	width: 254px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 15px;
+	}
+.page_content .message_number{
+	width: 153px;
+    font-size: 15px;
+    color: #ffffff;
+    background: #86c541;
+    height: 47px;
+    line-height: 47px;
+    float: left;
+    margin-left: 10px;
+    text-align: center;
+    cursor: pointer;
+	}	
+.page_text{
+	text-align: center;
+	font-size: 18px;
+	}	
+		
+
+
+
