@@ -11,6 +11,7 @@
     .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word;text-align:center}
   </style>
     <!--引用百度地图API-->
+    <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" 
 	src="https://api.map.baidu.com/api?v=2.0&ak=OT9Hpf8gEYoLXxoqGsSgo2Rp6UBuC9oC&s=1"></script>
   </head>
@@ -29,6 +30,11 @@
     }
     function createMap(){ 
       map = new BMap.Map("map"); 
+       //中心点定位
+      var nowHc2=$('#map').height()/2;//算出高的一半
+      var nowWc2=$('#map').width()/2;//宽的一半
+      map.panBy(nowWc2,nowHc2);//定位
+
       map.centerAndZoom(new BMap.Point(114.436554,30.438326),18);
     }
     function setMapEvent(){
