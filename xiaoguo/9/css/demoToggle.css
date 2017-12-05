@@ -1,0 +1,173 @@
+@charset "utf-8";
+/* CSS Document */
+/*便民服务*/
+.main3_bmfw {
+    width: 100%;
+    height: auto;
+	}
+.bmfw {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+	}
+.bmfw_1200 {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+	}
+.bmfw_tab {
+    width: 1356px;
+    margin-left: -78px;
+	margin: 0 auto;
+    overflow: hidden;
+	}
+.bmfw_tab li {
+    float: left;
+    width: 154px;
+    height: 116px;
+    margin: 0 36px;
+    cursor: pointer;
+	}
+.bmfw_tab li.on {
+    background: url(../img/1706131408472247428.png) bottom center no-repeat;
+	}
+.bmfw_tab li.on div {
+    background-image: url(../img/1706131408471456870.png);
+	}
+.bmfw_tab li div {
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin: 0 48px;
+    background-image: url(../img/1706131408471212990.png);
+	}
+.bmfw_tab li .bmfw_tab_1 {
+	background-position: 0 0;
+	}
+.bmfw_tab li .bmfw_tab_2 {
+	background-position: 300px 0;
+	}
+.bmfw_tab li .bmfw_tab_3 {
+	background-position: 240px 0;
+	}
+.bmfw_tab li .bmfw_tab_4 {
+	background-position: 180px 0;
+	}
+.bmfw_tab li .bmfw_tab_5 {
+	background-position: 120px 0;
+	}
+.bmfw_tab li .bmfw_tab_6 {
+	background-position: 60px 0;
+	}
+.bmfw_tab li .bmfw_tab_7 {
+	background-position: 0 120px;
+	}
+.bmfw_tab li .bmfw_tab_8 {
+	background-position: 300px 120px;
+	}
+.bmfw_tab li .bmfw_tab_9 {
+	background-position: 240px 120px;
+	}
+.bmfw_tab li .bmfw_tab_10 {
+	background-position: 180px 120px;
+	}
+.bmfw_tab li .bmfw_tab_11 {
+	background-position: 120px 120px;
+	}
+.bmfw_tab li .bmfw_tab_12 {
+	background-position: 60px 120px;
+	}
+.bmfw_tab li .bmfw_tab_13 {
+	background-position: 0px 60px;
+	}
+.bmfw_tab li .bmfw_tab_14 {
+	background-position: 300px 60px;
+	}
+.bmfw_tab li .bmfw_tab_15 {
+	background-position: 240px 60px;
+	}
+.bmfw_tab li .bmfw_tab_16 {
+	background-position: 180px 60px;
+	}
+.bmfw_tab li .bmfw_tab_17 {
+	background-position: 120px 60px;
+	}
+.bmfw_tab li .bmfw_tab_18 {
+	background-position: 60px 60px;
+	}
+.bmfw_tab li span {
+    float: left;
+    width: 100%;
+    color: #333;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 5px;
+    text-align: center;
+	}
+.bmfw_tab li.on span {
+    color: #67bbe7;
+	}
+	
+.bmfw_list {
+    width: 100%;
+    height: auto;
+	}
+.bmfw_list_01 {
+    float: left;
+    width: 100%;
+    display: none;
+    background: #f5f5f6;
+	}
+.bmfw_list_01.on {
+    display: block;
+	}
+.bmfw_list_11 {
+    width: 1200px;
+    margin: 20px auto 0;
+	}
+.bmfw_list_11_01 {
+    float: left;
+    width: 380px;
+    height: auto;
+    margin: 0 10px;
+    cursor: pointer;
+	}
+.bmfw_list_11_01 a {
+	display: block;
+   	height: 118px;
+    /*width: 380px;*/
+    padding: 20px;
+    background: #f5f5f6;
+    transition: background-color 0.5s;
+    margin-bottom: 20px;
+	}
+.bmfw_list_11_01 a:hover{
+	background-color: #fff;
+	}
+.bmfw_list_11_11 {
+    float: left;
+    width: 340px;
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    font-size: 15px;
+	}
+.bmfw_list_11_12 {
+    float: left;
+    width: 340px;
+    height: 78px;
+    overflow: hidden;
+	}
+.bmfw_list_11_12 li {
+    float: left;
+    height: 26px;
+    line-height: 26px;
+    color: #666;
+    font-size: 13px;
+    margin-right: 14px;
+    width: 104px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	}
+
